@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 		@GetMapping( "/addByTen/{num}")
 		public ResponseEntity<Long>  addByTen(@PathVariable Long num) {
-			return  new ResponseEntity<>(num+10, HttpStatus.CREATED);
+			return  new ResponseEntity<>(num+10, HttpStatus.OK);
 		}
 		
 		@GetMapping( "/add/{num1}/{num2}")
 		public ResponseEntity<Long>  add(@PathVariable Long num1, @PathVariable Long num2) {
-			return  new ResponseEntity<>(num1+num2, HttpStatus.CREATED);
+			return  new ResponseEntity<>(num1+num2, HttpStatus.OK);
 		}
 
 	}
