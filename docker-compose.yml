@@ -1,0 +1,17 @@
+version: '3'
+services:
+  app:
+    container_name: myapp
+    image: myapp
+    build: .
+    links:
+      - redis
+    ports:
+      - "8080:8080"
+  redis:
+    container_name: redis_runner
+    image: redis_runner
+    build: ./redis
+    hostname: redis
+    ports:
+      - "6379:6379"
