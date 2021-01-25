@@ -30,14 +30,14 @@ http://localhost:8080/checkPrime/104729
 
 and do refersh and try other numbers. It will return true or false based on primeness of the numbers.
 Then check the console in powershell, the logs should be something like this
-
+```
 myapp    | 104729 is not found in redis cache. Evalating it's primeness and chaching.....
 myapp    | 104729 is found in redis cache
 myapp    | 10472 is not found in redis cache. Evalating it's primeness and chaching.....
 myapp    | 10472 is found in redis cache
 myapp    | 113 is not found in redis cache. Evalating it's primeness and chaching.....
 myapp    | 113 is found in redis cache
-
+```
 - We can also check the stored keys/values in redis with these steps
 ```
 docker exec -it redis_runner sh
